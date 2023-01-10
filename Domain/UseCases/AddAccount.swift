@@ -7,7 +7,7 @@ import Foundation
 //para acessa-lo em outro target e preciso criar um novo construtor como public
 
 public protocol AddAccount {
-    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, Error>) -> Void) //assincrono
+    func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) //assincrono
 }
 
 //oque a API espera receber
