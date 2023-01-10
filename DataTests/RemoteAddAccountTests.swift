@@ -17,6 +17,7 @@ class RemoteAddAccount {
 //Principio de segregação de interface: As interfaces devem ser pequenas
 //É melhor tem varias interfaces pequenas  do que um interface grande
 //Ajuda nos teste unitários
+//Desacoplando o nosso caso de uso. Injetando o protocol
 
 protocol HttpPostClient {
     func post(url: URL)
@@ -30,7 +31,9 @@ class RemoteAddAccountTests: XCTestCase {
         sut.add()
         XCTAssertEqual(httpClientSpy.url, url)
     }
-     
+}
+
+extension RemoteAddAccountTests {
     class HttpClientSpy: HttpPostClient {
         var url: URL?
         
