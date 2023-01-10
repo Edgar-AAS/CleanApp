@@ -1,7 +1,6 @@
 import Foundation
 
 //add account use case
-
 protocol AddAccount {
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, Error>) -> Void) //assincrono
 }
