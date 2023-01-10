@@ -1,29 +1,11 @@
 import XCTest
 import Domain
+import Data
 
 //Principio de segregação de interface: As interfaces devem ser pequenas
 //É melhor tem varias interfaces pequenas  do que um interface grande
 //Ajuda nos teste unitários
 //Desacoplando o nosso caso de uso. Injetando o protocol
-
-class RemoteAddAccount {
-    private let url: URL
-    private let httpClient: HttpPostClient
-    
-    init(url: URL, httpClient: HttpPostClient) {
-        self.url = url
-        self.httpClient = httpClient
-    }
-    
-    func add(addAccountModel: AddAccountModel) {
-        let data = addAccountModel.toData()
-        httpClient.post(to: url, with: data)
-    }
-}
-
-protocol HttpPostClient {
-    func post(to url: URL, with data: Data?)
-}
 
 class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_httpClient_with_correct_url() {
