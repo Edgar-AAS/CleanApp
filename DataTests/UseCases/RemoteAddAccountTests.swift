@@ -3,10 +3,6 @@ import Domain
 import Data
 
 //Principio de segregação de interface: As interfaces devem ser pequenas
-//É melhor tem varias interfaces pequenas  do que um interface grande
-//Ajuda nos teste unitários
-//Desacoplando o nosso caso de uso. Injetando o protocol
-
 class RemoteAddAccountTests: XCTestCase {
     func test_add_should_call_httpClient_with_correct_url() {
         //todos os teste devem ter acesso ao httpClientSpy

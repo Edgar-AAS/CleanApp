@@ -1,6 +1,6 @@
 import Foundation
 
-//add account use case
+//add account USE CASE 
 //o padrao do swift é internal que só é acessivel dentro do mesmo target
 //setando protocol e models para public
 //por padrao o construtor de uma struct é internal
