@@ -4,7 +4,7 @@ import Foundation
 //o padrao do swift é internal que só é acessivel dentro do mesmo target
 //setando protocol e models para public
 //por padrao o construtor de uma struct é internal
-//para acessa-lo em outro target e preciso criar um novo construtor como public
+//para acessa-lo em outro target e preciso criar um novo construtor publico
 
 public protocol AddAccount {
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) //assincrono
