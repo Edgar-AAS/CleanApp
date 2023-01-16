@@ -11,7 +11,6 @@ public protocol AddAccount {
 }
 
 //oque a API espera receber
-
 public struct AddAccountModel: Model {
     public var name: String
     public var email: String
