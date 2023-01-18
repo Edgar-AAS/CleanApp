@@ -56,7 +56,7 @@ class SignUpPresenterTests: XCTestCase {
         XCTAssertEqual(emailValidatorSpy.email, signUpViewModel.email)
     }
     
-    func test_() {
+    func test_signUp_should_call_addAccount_with_correct_values() {
         let addAccountSpy = AddAccountSpy()
         let sut = makeSut(addAccount: addAccountSpy)
         sut.signUp(viewModel: makeSignUpViewModel())
