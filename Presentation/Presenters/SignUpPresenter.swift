@@ -22,6 +22,8 @@ public final class SignUpPresenter {
             return "O campo Senha é obrigatório"
         } else if viewModel.passwordConfirmation == nil || viewModel.passwordConfirmation!.isEmpty {
             return "O campo Confirmar senha é obrigatório"
+        }  else if viewModel.password != viewModel.passwordConfirmation {
+            return "A senha de confirmacão deve ser igual a senha"
         }
         return nil
     }
