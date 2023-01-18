@@ -1,10 +1,3 @@
-//
-//  UrlProtocolStub.swift
-//  InfraTests
-//
-//  Created by Leonardo Almeida on 17/01/23.
-//
-
 import Foundation
 
 class UrlProtocolStub: URLProtocol {

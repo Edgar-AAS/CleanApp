@@ -66,12 +66,11 @@ extension AlamofireAdpterTests {
         return sut
     }
     
-    //fix: data racing bug
+    //fix: data race bug
     func testRequestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void) {
         let sut = makeSut()
         let exp = expectation(description: "waiting")
-        
-        sut.post(to: url, with: data) { _ in exp.fulfill() }
+        sut.post(to: url, with: data) { _ in exp.fulfill() } 
         var request: URLRequest?
         UrlProtocolStub.observerRequest { request = $0 }
         wait(for: [exp], timeout: 1)
