@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
+		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		724D613B2975C26D009F9676 /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724D61322975C26D009F9676 /* Infra.framework */; };
 		724D61402975C26D009F9676 /* AlamofireAdpterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D613F2975C26D009F9676 /* AlamofireAdpterTests.swift */; };
 		724D61512975C4DF009F9676 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72807CBC296CEBAD001B8F10 /* Data.framework */; };
@@ -148,6 +149,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		721696372979A79C00471DD4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		724D61322975C26D009F9676 /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		724D61352975C26D009F9676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		724D613A2975C26D009F9676 /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -470,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				72A6F0262978277D002A4F8C /* AlertView.swift */,
+				721696372979A79C00471DD4 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -880,6 +883,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A6F0092978251E002A4F8C /* SignUpPresenter.swift in Sources */,
+				721696382979A79C00471DD4 /* LoadingView.swift in Sources */,
 				72A6F0272978277D002A4F8C /* AlertView.swift in Sources */,
 				72A6F04A29783118002A4F8C /* EmailValidator.swift in Sources */,
 			);
