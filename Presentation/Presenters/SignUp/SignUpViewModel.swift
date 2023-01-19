@@ -13,3 +13,4 @@ public struct SignUpViewModel {
         self.passwordConfirmation = passwordConfirmation
     }
 }
+ 
