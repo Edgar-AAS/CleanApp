@@ -35,7 +35,7 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertView: alertViewSpy)
         sut.signUp(viewModel: makeSignUpViewModel(passwordConfirmation: "wrong_password"))
-        XCTAssertEqual(alertViewSpy.viewModel, makeInvalidAlertViewRequired(fieldName: "Confirmar Senha"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeInvalidAlertViewModel(fieldName: "Confirmar Senha"))
     }
     
     //testando apenas o retorno da função
@@ -45,7 +45,7 @@ class SignUpPresenterTests: XCTestCase {
         let sut = makeSut(alertView: alertViewSpy, emailValidator: emailValidatorSpy)
         emailValidatorSpy.simulateInvalidEmail()
         sut.signUp(viewModel: makeSignUpViewModel())
-        XCTAssertEqual(alertViewSpy.viewModel, makeInvalidAlertViewRequired(fieldName: "Email"))
+        XCTAssertEqual(alertViewSpy.viewModel, makeInvalidAlertViewModel(fieldName: "Email"))
     }
     
     func test_signUp_should_call_emailValidator_with_correct_email() {
@@ -62,6 +62,16 @@ class SignUpPresenterTests: XCTestCase {
         sut.signUp(viewModel: makeSignUpViewModel())
         XCTAssertEqual(addAccountSpy.addAccountModel, makeAddAccountModel())
     }
+    
+    //quando o addAccount completar com error o alertViewModel que deve ser passado para o alertView deve ser igual o makeErrorAlertViewModel abaixo
+    func test_signUp_should_show_error_messsage_if_addAccount_fails() {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertView: alertViewSpy, addAccount: addAccountSpy)
+        sut.signUp(viewModel: makeSignUpViewModel())
+        addAccountSpy.completeWithError(.unexpected)
+        XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(message: "Algo inesperado aconteceu tente novamente em alguns instantes"))
+    }
 }
 
 extension SignUpPresenterTests {
@@ -74,8 +84,12 @@ extension SignUpPresenterTests {
         return AlertViewModel(title: "Erro de validação", message: "O campo \(fieldName) é obrigatório")
     }
     
-    func makeInvalidAlertViewRequired(fieldName: String) -> AlertViewModel {
+    func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
         return AlertViewModel(title: "Erro de validação", message: "O campo \(fieldName) é inválido")
+    }
+    
+    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Erro", message: message)
     }
     
     func makeSignUpViewModel(
@@ -89,6 +103,7 @@ extension SignUpPresenterTests {
     
     class AlertViewSpy: AlertView {
         var viewModel: AlertViewModel?
+        
         func showMessage(viewModel: AlertViewModel) {
             self.viewModel = viewModel
         }
@@ -108,12 +123,18 @@ extension SignUpPresenterTests {
         }
     }
     
+    //simular error
     class AddAccountSpy: AddAccount {
         var addAccountModel: AddAccountModel?
+        var completion: ((Result<AccountModel, DomainError>) -> Void)?
         
         func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
             self.addAccountModel = addAccountModel
+            self.completion = completion
         }
         
+        func completeWithError(_ error: DomainError) {
+            completion?(.failure(error))
+        }
     }
 }
