@@ -25,7 +25,7 @@ public final class SignUpPresenter {
             }
         }
     }
-    
+   
     private func validate(viewModel: SignUpViewModel) -> String? {
         if viewModel.name == nil || viewModel.name!.isEmpty {
             return "O campo Nome é obrigatório"
