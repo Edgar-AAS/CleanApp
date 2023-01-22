@@ -1,5 +1,6 @@
 import Foundation
 
+//Nao passa pela serialização inversa
 func makeInvalidData() -> Data {
     return Data("invalid_data".utf8)
 }

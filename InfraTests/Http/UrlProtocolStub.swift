@@ -28,7 +28,7 @@ class UrlProtocolStub: URLProtocol {
     override open func startLoading() {
         UrlProtocolStub.emit?(request)
         
-        //simulando casos
+        //simulando comportamente de requisições
         if let data = UrlProtocolStub.data {
             client?.urlProtocol(self, didLoad: data)
         }
@@ -40,6 +40,7 @@ class UrlProtocolStub: URLProtocol {
         if let error = UrlProtocolStub.error {
             client?.urlProtocol(self, didFailWithError: error)
         }
+        
         client?.urlProtocolDidFinishLoading(self)
     }
     

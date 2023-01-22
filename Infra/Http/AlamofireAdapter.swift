@@ -10,10 +10,10 @@ import Data
     }
     
     public func post(to url: URL, with data: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
-        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData
-        { (dataResponse) in
+        session.request(url, method: .post, parameters: data?.toJson(), encoding: JSONEncoding.default).responseData { (dataResponse) in
             guard let statusCode = dataResponse.response?.statusCode  else { return
-                completion(.failure(.noConnectivity)) }
+                completion(.failure(.noConnectivity))
+            }
             
             switch dataResponse.result {
             case .failure: completion(.failure(.noConnectivity))

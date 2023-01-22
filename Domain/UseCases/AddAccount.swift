@@ -10,7 +10,7 @@ public protocol AddAccount {
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) //assincrono
 }
 
-//oque a API espera receber
+//oque a API espera receber1
 public struct AddAccountModel: Model {
     public var name: String
     public var email: String

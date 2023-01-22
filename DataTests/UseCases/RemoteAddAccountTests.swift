@@ -21,6 +21,7 @@ class RemoteAddAccountTests: XCTestCase {
     
     //callBack tests
     //error case
+    
     func test_add_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.unexpected), when: {
@@ -28,7 +29,7 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
-    //success case
+    //retorno da API no caso de sucesso
     func test_add_should_complete_with_account_if_client_completes_with_valid_data() {
         let (sut, httpClientSpy) = makeSut()
         let account = makeAccountModel()
@@ -61,8 +62,8 @@ extension RemoteAddAccountTests {
     //evita que que o seja necessario trocar todos os testes que o tenha
     //como eu preciso ter acesso ao meu spy para fazer a comparação dos testes
     //cria um factory do meu sut passando a tupla (sut, httpClientSpy) como retorno
-    
-    func makeSut(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy)  {
+
+    func makeSut(url: URL = URL(string: "http://any-url.com")!, file: StaticString = #filePath, line: UInt = #line) -> (sut: RemoteAddAccount, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         //roda no final d   e todo test verificando se o sut foi desacoplado da memoria

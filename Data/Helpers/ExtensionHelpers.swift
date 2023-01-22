@@ -8,5 +8,4 @@ public extension Data {
     func toJson() -> [String: Any]? {
         return try? JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
     }
-    
 }

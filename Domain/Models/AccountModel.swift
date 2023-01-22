@@ -1,5 +1,6 @@
 import Foundation
 
+//Oque a API devolve
 public struct AccountModel: Model  {
     public var id: String
     public var name: String

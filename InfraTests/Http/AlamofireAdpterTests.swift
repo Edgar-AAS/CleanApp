@@ -24,6 +24,7 @@ class AlamofireAdpterTests: XCTestCase {
     }
     
     func test_post_should_complete_with_error_on_all_invalid_cases() {
+        //invalid cases
         expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(), error: makeError()))
         expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: makeError()))
         expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: nil))
@@ -70,7 +71,7 @@ extension AlamofireAdpterTests {
     func testRequestFor(url: URL = makeUrl(), data: Data?, action: @escaping (URLRequest) -> Void) {
         let sut = makeSut()
         let exp = expectation(description: "waiting")
-        sut.post(to: url, with: data) { _ in exp.fulfill() } 
+        sut.post(to: url, with: data) { _ in exp.fulfill() } //so chama o full fill quando a requisicao acabar
         var request: URLRequest?
         UrlProtocolStub.observerRequest { request = $0 }
         wait(for: [exp], timeout: 1)
@@ -83,9 +84,9 @@ extension AlamofireAdpterTests {
         let exp = expectation(description: "waiting")
         sut.post(to: makeUrl(), with: makeValidData()) { receivedResult in
             switch (expectedResult, receivedResult) {
-            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
-            case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
-            default: XCTFail("Expected \(expectedResult) got \(receivedResult) instead", file: file, line: line)
+                case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+                case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
+                default: XCTFail("Expected \(expectedResult) got \(receivedResult) instead", file: file, line: line)
             }
             exp.fulfill()
         }
