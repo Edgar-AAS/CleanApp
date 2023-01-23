@@ -37,6 +37,7 @@
 		72017ACB297F2B0800EA83F4 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017ACA297F2B0800EA83F4 /* SignUpIntegrationTests.swift */; };
 		72017AD4297F2BBF00EA83F4 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696742979D44400471DD4 /* AddAccountSpy.swift */; };
 		72017ADD297F2C3B00EA83F4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
+		72017AE8297F344C00EA83F4 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AE7297F344C00EA83F4 /* WeakVarProxy.swift */; };
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */; };
@@ -328,6 +329,7 @@
 		72017AB5297F27D900EA83F4 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		72017AC0297F289F00EA83F4 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
 		72017ACA297F2B0800EA83F4 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
+		72017AE7297F344C00EA83F4 /* WeakVarProxy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakVarProxy.swift; sourceTree = "<group>"; };
 		721696372979A79C00471DD4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7216964B2979CBE400471DD4 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
@@ -573,6 +575,7 @@
 		72017A1F297F07EB00EA83F4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				72017AE6297F343700EA83F4 /* Proxies */,
 				72017ABF297F287C00EA83F4 /* Composers */,
 				72017AAA297F0A2400EA83F4 /* Factories */,
 				72017A20297F07EB00EA83F4 /* AppDelegate.swift */,
@@ -608,6 +611,14 @@
 				72017AC0297F289F00EA83F4 /* SignUpComposer.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		72017AE6297F343700EA83F4 /* Proxies */ = {
+			isa = PBXGroup;
+			children = (
+				72017AE7297F344C00EA83F4 /* WeakVarProxy.swift */,
+			);
+			path = Proxies;
 			sourceTree = "<group>";
 		};
 		7216963E2979CB1100471DD4 /* SignUp */ = {
@@ -1486,6 +1497,7 @@
 				72017A21297F07EB00EA83F4 /* AppDelegate.swift in Sources */,
 				72017AAC297F0A3900EA83F4 /* ControllerFactory.swift in Sources */,
 				72017A23297F07EB00EA83F4 /* SceneDelegate.swift in Sources */,
+				72017AE8297F344C00EA83F4 /* WeakVarProxy.swift in Sources */,
 				72017AC1297F289F00EA83F4 /* SignUpComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
