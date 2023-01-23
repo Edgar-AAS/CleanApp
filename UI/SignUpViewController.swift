@@ -5,6 +5,11 @@ import Presentation
 final class SignUpViewController: UIViewController {
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var nameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var passwordConfirmationTextField: UITextField!
+    
     var signUp: ((SignUpViewModel) -> Void)? //dependencia
     
     override func viewDidLoad() {
@@ -17,7 +22,8 @@ final class SignUpViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        signUp?(SignUpViewModel(name: nil, email: nil, password: nil, passwordConfirmation: nil))
+        let viewModel = SignUpViewModel(name: nameTextField.text, email: emailTextField.text, password: passwordTextField.text, passwordConfirmation: passwordConfirmationTextField.text)
+        signUp?(viewModel)
     }
 }
 
