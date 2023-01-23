@@ -34,6 +34,9 @@
 		72017AAC297F0A3900EA83F4 /* ControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AAB297F0A3900EA83F4 /* ControllerFactory.swift */; };
 		72017AB6297F27D900EA83F4 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AB5297F27D900EA83F4 /* UseCaseFactory.swift */; };
 		72017AC1297F289F00EA83F4 /* SignUpComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AC0297F289F00EA83F4 /* SignUpComposer.swift */; };
+		72017ACB297F2B0800EA83F4 /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017ACA297F2B0800EA83F4 /* SignUpIntegrationTests.swift */; };
+		72017AD4297F2BBF00EA83F4 /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696742979D44400471DD4 /* AddAccountSpy.swift */; };
+		72017ADD297F2C3B00EA83F4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */; };
@@ -324,6 +327,7 @@
 		72017AAB297F0A3900EA83F4 /* ControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerFactory.swift; sourceTree = "<group>"; };
 		72017AB5297F27D900EA83F4 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		72017AC0297F289F00EA83F4 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
+		72017ACA297F2B0800EA83F4 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
 		721696372979A79C00471DD4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7216964B2979CBE400471DD4 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
@@ -583,6 +587,7 @@
 		72017A36297F07F800EA83F4 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
+				72017ACA297F2B0800EA83F4 /* SignUpIntegrationTests.swift */,
 				72017A39297F07F800EA83F4 /* Info.plist */,
 			);
 			path = MainTests;
@@ -1278,6 +1283,7 @@
 					};
 					72017A32297F07F800EA83F4 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 						TestTargetID = 72017A1D297F07EB00EA83F4;
 					};
 					724C65D3297DD6830062A23A = {
@@ -1488,6 +1494,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72017AD4297F2BBF00EA83F4 /* AddAccountSpy.swift in Sources */,
+				72017ADD297F2C3B00EA83F4 /* TestExtensions.swift in Sources */,
+				72017ACB297F2B0800EA83F4 /* SignUpIntegrationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1860,6 +1869,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAQ2W7K69R;
 				INFOPLIST_FILE = MainTests/Info.plist;
@@ -1871,6 +1881,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.coDandoPraTodoMundo.MainTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Main.app/Main";
@@ -1882,6 +1893,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GAQ2W7K69R;
 				INFOPLIST_FILE = MainTests/Info.plist;
