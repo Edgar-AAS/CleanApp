@@ -18,5 +18,5 @@ extension WeakVarProxy: AlertView where T: AlertView {
 extension WeakVarProxy: LoadingView where T: LoadingView {
     func display(viewModel: LoadingViewModel) {
         instance?.display(viewModel: viewModel)
-    }
+    } 
 }
