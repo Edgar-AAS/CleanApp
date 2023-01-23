@@ -11,6 +11,4 @@ public class EmailValidatorAdapter: EmailValidator {
         let regex = try! NSRegularExpression(pattern: pattern)
         return regex.firstMatch(in: email, options: [], range: range) != nil
     }
-    
-    
 }
