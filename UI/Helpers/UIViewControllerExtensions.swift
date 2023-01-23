@@ -1,10 +1,3 @@
-//
-//  UIViewControllerExtensions.swift
-//  UI
-//
-//  Created by Leonardo Almeida on 23/01/23.
-//
-
 import Foundation
 import UIKit
 
@@ -19,3 +12,4 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+ 

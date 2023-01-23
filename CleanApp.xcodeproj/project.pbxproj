@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7201797C297EC80B00EA83F4 /* TestsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7201797B297EC80B00EA83F4 /* TestsExtensions.swift */; };
 		72017991297ED44C00EA83F4 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017990297ED44C00EA83F4 /* UIViewControllerExtensions.swift */; };
+		7201799F297ED64400EA83F4 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7201799E297ED64400EA83F4 /* Storyboarded.swift */; };
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */; };
@@ -191,6 +192,7 @@
 /* Begin PBXFileReference section */
 		7201797B297EC80B00EA83F4 /* TestsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsExtensions.swift; sourceTree = "<group>"; };
 		72017990297ED44C00EA83F4 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		7201799E297ED64400EA83F4 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		721696372979A79C00471DD4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7216964B2979CBE400471DD4 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
@@ -374,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				72017990297ED44C00EA83F4 /* UIViewControllerExtensions.swift */,
+				7201799E297ED64400EA83F4 /* Storyboarded.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1092,6 +1095,7 @@
 			files = (
 				72017991297ED44C00EA83F4 /* UIViewControllerExtensions.swift in Sources */,
 				724C66EB297DE9500062A23A /* SignUpViewController.swift in Sources */,
+				7201799F297ED64400EA83F4 /* Storyboarded.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
