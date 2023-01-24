@@ -39,6 +39,7 @@
 		72017AE8297F344C00EA83F4 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AE7297F344C00EA83F4 /* WeakVarProxy.swift */; };
 		72017B15297F3DAC00EA83F4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017B14297F3DAC00EA83F4 /* Environment.swift */; };
 		72017B492980250800EA83F4 /* TestFactorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696882979D5CD00471DD4 /* TestFactorys.swift */; };
+		72017B5C2980652700EA83F4 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017B5B2980652700EA83F4 /* MainQueueDispatchDecorator.swift */; };
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */; };
@@ -333,6 +334,7 @@
 		72017B02297F3C5E00EA83F4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		72017B03297F3CF300EA83F4 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		72017B14297F3DAC00EA83F4 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		72017B5B2980652700EA83F4 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		721696372979A79C00471DD4 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		7216964B2979CBE400471DD4 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
@@ -578,6 +580,7 @@
 		72017A1F297F07EB00EA83F4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				72017B5A2980650F00EA83F4 /* Decorators */,
 				72017B01297F3C5000EA83F4 /* Env */,
 				72017AE6297F343700EA83F4 /* Proxies */,
 				72017ABF297F287C00EA83F4 /* Composers */,
@@ -640,6 +643,14 @@
 				72017ACA297F2B0800EA83F4 /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
+			sourceTree = "<group>";
+		};
+		72017B5A2980650F00EA83F4 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				72017B5B2980652700EA83F4 /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		7216963E2979CB1100471DD4 /* SignUp */ = {
@@ -1515,6 +1526,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72017AB6297F27D900EA83F4 /* UseCaseFactory.swift in Sources */,
+				72017B5C2980652700EA83F4 /* MainQueueDispatchDecorator.swift in Sources */,
 				72017B15297F3DAC00EA83F4 /* Environment.swift in Sources */,
 				72017A21297F07EB00EA83F4 /* AppDelegate.swift in Sources */,
 				72017A23297F07EB00EA83F4 /* SceneDelegate.swift in Sources */,
