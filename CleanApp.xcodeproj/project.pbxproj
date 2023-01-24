@@ -38,6 +38,7 @@
 		72017ADD297F2C3B00EA83F4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		72017AE8297F344C00EA83F4 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017AE7297F344C00EA83F4 /* WeakVarProxy.swift */; };
 		72017B15297F3DAC00EA83F4 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72017B14297F3DAC00EA83F4 /* Environment.swift */; };
+		72017B492980250800EA83F4 /* TestFactorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696882979D5CD00471DD4 /* TestFactorys.swift */; };
 		7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		721696382979A79C00471DD4 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721696372979A79C00471DD4 /* LoadingView.swift */; };
 		721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216963F2979CB2D00471DD4 /* SignUpViewModel.swift */; };
@@ -594,7 +595,6 @@
 			isa = PBXGroup;
 			children = (
 				72017B402980206E00EA83F4 /* Composers */,
-				72017ACA297F2B0800EA83F4 /* SignUpComposerTests.swift */,
 				72017A39297F07F800EA83F4 /* Info.plist */,
 			);
 			path = MainTests;
@@ -637,6 +637,7 @@
 		72017B402980206E00EA83F4 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
+				72017ACA297F2B0800EA83F4 /* SignUpComposerTests.swift */,
 			);
 			path = Composers;
 			sourceTree = "<group>";
@@ -1526,6 +1527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72017B492980250800EA83F4 /* TestFactorys.swift in Sources */,
 				72017AD4297F2BBF00EA83F4 /* AddAccountSpy.swift in Sources */,
 				72017ADD297F2C3B00EA83F4 /* TestExtensions.swift in Sources */,
 				72017ACB297F2B0800EA83F4 /* SignUpComposerTests.swift in Sources */,

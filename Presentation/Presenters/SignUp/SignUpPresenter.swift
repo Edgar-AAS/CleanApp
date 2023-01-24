@@ -18,20 +18,20 @@ public final class SignUpPresenter {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Erro de validação", message: message))
         } else {
-            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
+            self.loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             addAccount.add(addAccountModel: SignUpMapper.toAddAccountModel(viewModel: viewModel)) { [weak self] (result) in
                 guard let self = self else { return }
                 switch result {
-                    case .failure:
-                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu tente novamente em alguns instantes"))
-                    case .success:
-                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
+                case .failure:
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu tente novamente em alguns instantes"))
+                case .success:
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }
-   
+    
     private func validate(viewModel: SignUpViewModel) -> String? {
         if viewModel.name == nil || viewModel.name!.isEmpty {
             return "O campo Nome é obrigatório"
