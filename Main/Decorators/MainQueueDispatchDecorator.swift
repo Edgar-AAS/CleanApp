@@ -1,7 +1,8 @@
 import Foundation
 import Domain
 
-//tratamento de threading
+//Decorator: Adicionar funcionalidade a uma classe(a instância dela) sem precisar muda-la
+//tratamento de threading (dentro da main layer (composição dos objetos)
 public final class MainQueueDispatchDecorator<T> {
     private let instance: T
     
