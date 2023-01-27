@@ -19,7 +19,7 @@ public final class MainQueueDispatchDecorator<T> {
 
 //Qualquer classe que tiver em conformidade com o addAccount, e estiver usando esse decorator, vai ter acesso a esse comportamento
 extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
-    public func add(addAccountModel: AddAccountModel, completion: @escaping (Result<AccountModel, DomainError>) -> Void) {
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
         instance.add(addAccountModel: addAccountModel) { [weak self] result  in
             self?.dispatch { completion(result) }
         }
