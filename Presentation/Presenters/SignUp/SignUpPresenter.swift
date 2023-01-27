@@ -22,8 +22,15 @@ public final class SignUpPresenter {
             addAccount.add(addAccountModel: viewModel.toAddAccountModel()) { [weak self] (result) in
                 guard let self = self else { return }
                 switch result {
-                case .failure:
-                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: "Algo inesperado aconteceu tente novamente em alguns instantes"))
+                case .failure(let error):
+                    var errorMessage: String!
+                    switch error {
+                    case .emailInUse:
+                        errorMessage = "Esse e-mail ja está em uso"
+                    default:
+                        errorMessage = "Algo inesperado aconteceu tente novamente em alguns instantes"
+                    }
+                    self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: errorMessage))
                 case .success:
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Conta criada com sucesso."))
                 }
