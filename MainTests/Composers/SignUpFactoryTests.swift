@@ -3,7 +3,7 @@ import Main
 import UI
 import Validation
 
-class SignUpComposerTests: XCTestCase {
+class SignUpFactoryTests: XCTestCase {
     //ao aumentar o timeout para > 0.6 na minha maquina, o teste gera um falso positivo, pois o tempo para executar o completion passa a ser suficiente
     func test_background_request_should_complete_on_main_thread() {
         let (sut, addAccountSpy) = makeSut()
@@ -18,7 +18,7 @@ class SignUpComposerTests: XCTestCase {
     }
     
     func test_signUp_compose_with_correct_validations() {
-        let validations = SignUpComposer.makeValidations()
+        let validations = makeSignUpValidations()
         XCTAssertEqual(validations[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "name", fieldLabel: "Nome"))
         XCTAssertEqual(validations[1] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"))
         XCTAssertEqual(validations[2] as! EmailValidation, EmailValidation(fieldName: "email", fieldLabel: "Email", emailValidator: EmailValidatorSpy()))
@@ -28,10 +28,10 @@ class SignUpComposerTests: XCTestCase {
     }
 }
 
-extension SignUpComposerTests {
+extension SignUpFactoryTests {
     func makeSut(file: StaticString = #filePath, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy){
         let addAccountSpy = AddAccountSpy()
-        let sut = SignUpComposer.composeViewControllerWith(addAccount: MainQueueDispatchDecorator(addAccountSpy))
+        let sut = makeSignUpController(addAccount: MainQueueDispatchDecorator(addAccountSpy))
         checkMemoryLeak(for: sut, file: file, line: line)
         checkMemoryLeak(for: addAccountSpy, file: file, line: line)
         return (sut, addAccountSpy)
