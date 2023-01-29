@@ -22,14 +22,12 @@ class RemoteAddAccountTests: XCTestCase {
     //callBack tests
     //error case
     
-    
     func test_add_should_complete_with_email_in_use_error_if_client_completes_with_forbidden() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.emailInUse), when: {
             httpClientSpy.completeWithError(.forbidden)
         })
     }
-    
     
     //retorno da API no caso de sucesso
     func test_add_should_complete_with_account_if_client_completes_with_valid_data() {
