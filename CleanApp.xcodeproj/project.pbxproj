@@ -96,6 +96,11 @@
 		72807CCA296CEBAD001B8F10 /* RemoteAddAccountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72807CC9296CEBAD001B8F10 /* RemoteAddAccountTests.swift */; };
 		72807CDA296CEC95001B8F10 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72807CA5296CE64C001B8F10 /* Domain.framework */; };
 		72807CDB296CEC95001B8F10 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 72807CA5296CE64C001B8F10 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		728584892986B87F00722C66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 728584882986B87F00722C66 /* Images.xcassets */; };
+		728584932986C45B00722C66 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728584922986C45B00722C66 /* UIColorExtensions.swift */; };
+		7285849D2986C48900722C66 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7285849C2986C48900722C66 /* Color.swift */; };
+		728584A82986C72100722C66 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728584A72986C72100722C66 /* RoundedTextField.swift */; };
+		728584B22986D10400722C66 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728584B12986D10400722C66 /* NavigationController.swift */; };
 		729410902970CA5E00586243 /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7294108F2970CA5E00586243 /* TestExtensions.swift */; };
 		729410942970CB9000586243 /* TestFactorys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729410932970CB9000586243 /* TestFactorys.swift */; };
 		729410992970CC5B00586243 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729410982970CC5B00586243 /* HttpClientSpy.swift */; };
@@ -413,6 +418,11 @@
 		72807CC4296CEBAD001B8F10 /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72807CC9296CEBAD001B8F10 /* RemoteAddAccountTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountTests.swift; sourceTree = "<group>"; };
 		72807CCB296CEBAD001B8F10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		728584882986B87F00722C66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		728584922986C45B00722C66 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		7285849C2986C48900722C66 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		728584A72986C72100722C66 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		728584B12986D10400722C66 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		7294108F2970CA5E00586243 /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		729410932970CB9000586243 /* TestFactorys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactorys.swift; sourceTree = "<group>"; };
 		729410982970CC5B00586243 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
@@ -594,6 +604,8 @@
 			children = (
 				72017990297ED44C00EA83F4 /* UIViewControllerExtensions.swift */,
 				7201799E297ED64400EA83F4 /* Storyboarded.swift */,
+				728584922986C45B00722C66 /* UIColorExtensions.swift */,
+				7285849C2986C48900722C66 /* Color.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -795,6 +807,8 @@
 		724C65D5297DD6830062A23A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				728584A62986C70F00722C66 /* Components */,
+				728584872986B86B00722C66 /* Resources */,
 				7201798F297ED42C00EA83F4 /* Helpers */,
 				72017972297EC6EE00EA83F4 /* Scenes */,
 				724C65D7297DD6830062A23A /* Info.plist */,
@@ -1023,6 +1037,23 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		728584872986B86B00722C66 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				728584882986B87F00722C66 /* Images.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		728584A62986C70F00722C66 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				728584A72986C72100722C66 /* RoundedTextField.swift */,
+				728584B12986D10400722C66 /* NavigationController.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		729410882970C97400586243 /* Helpers */ = {
@@ -1553,6 +1584,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724C66F3297DE9A10062A23A /* SignUp.storyboard in Resources */,
+				728584892986B87F00722C66 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1682,8 +1714,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				72017991297ED44C00EA83F4 /* UIViewControllerExtensions.swift in Sources */,
+				728584A82986C72100722C66 /* RoundedTextField.swift in Sources */,
 				724C66EB297DE9500062A23A /* SignUpViewController.swift in Sources */,
 				7201799F297ED64400EA83F4 /* Storyboarded.swift in Sources */,
+				7285849D2986C48900722C66 /* Color.swift in Sources */,
+				728584B22986D10400722C66 /* NavigationController.swift in Sources */,
+				728584932986C45B00722C66 /* UIColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
