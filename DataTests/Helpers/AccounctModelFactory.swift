@@ -5,6 +5,10 @@ func makeAccountModel() -> AccountModel {
     return AccountModel(accessToken: "any_token")
 }
 
+func makeAuthenticationModel() -> AuthenticationModel {
+    return AuthenticationModel(email: "any_email@mail.com", password: "any_password")
+}
+
 func makeAddAccountModel() -> AddAccountModel {
     return AddAccountModel(
         name: "any_name",
