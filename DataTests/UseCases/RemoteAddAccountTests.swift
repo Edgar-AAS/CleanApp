@@ -53,7 +53,7 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
     
-    func test_add_should_not_with_sut_has_been_deallocated() {
+    func test_add_should_not_complete_with_sut_has_been_deallocated() {
         let httpClientSpy = HttpClientSpy()
         var sut: RemoteAddAccount? = RemoteAddAccount(url: makeUrl(), httpClient: httpClientSpy)
         var result: AddAccount.Result?

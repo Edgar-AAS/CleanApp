@@ -12,7 +12,7 @@ public final class RemoteAddAccount: AddAccount {
     
     public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
         httpClient.post(to: url, with: addAccountModel.toData()) { [weak self] result in
-            guard self != nil else { return }
+            guard self != nil else { return } //garantindo que o completion nao sera chamado apos o RemoteAddAccount for desalocado
             switch result {
             case .success(let data):
                 if let model: AccountModel = data?.toModel() {
