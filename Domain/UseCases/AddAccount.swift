@@ -7,7 +7,6 @@ import Foundation
 //para acessa-lo em outro target e preciso criar um novo construtor publico
 //retorno assincrono
 
-
 public protocol AddAccount {
     typealias Result = Swift.Result<AccountModel, DomainError>
     func add(addAccountModel: AddAccountModel, completion: @escaping (Result) -> Void)
