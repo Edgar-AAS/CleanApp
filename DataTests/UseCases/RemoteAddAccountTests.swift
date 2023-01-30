@@ -12,7 +12,6 @@ class RemoteAddAccountTests: XCTestCase {
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
     
-    
     func test_add_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
         expect(sut, completeWith: .failure(.unexpected)) {

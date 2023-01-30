@@ -969,9 +969,9 @@
 			isa = PBXGroup;
 			children = (
 				72807CA6296CE64C001B8F10 /* Domain */,
+				724D61332975C26D009F9676 /* Infra */,
 				72807CBD296CEBAD001B8F10 /* Data */,
 				72807CC8296CEBAD001B8F10 /* DataTests */,
-				724D61332975C26D009F9676 /* Infra */,
 				724D613E2975C26D009F9676 /* InfraTests */,
 				724D61B029771ADA009F9676 /* UseCasesIntegrationTests */,
 				72A6EFE029777BEC002A4F8C /* Presentation */,
