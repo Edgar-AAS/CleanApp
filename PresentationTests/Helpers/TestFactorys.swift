@@ -10,3 +10,6 @@ func makeSignUpViewModel(
     return SignUpViewModel(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation)
 }
 
+func makeLoginViewModel() -> LoginViewModel {
+    return LoginViewModel(email: "any_email@mail.com", password: "any_password")
+}

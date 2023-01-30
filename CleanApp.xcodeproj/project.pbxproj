@@ -80,6 +80,10 @@
 		724D618C297709D1009F9676 /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D618B297709D1009F9676 /* UrlProtocolStub.swift */; };
 		724D61B229771ADA009F9676 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D61B129771ADA009F9676 /* AddAccountIntegrationTests.swift */; };
 		724D61B429771ADA009F9676 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72807CBC296CEBAD001B8F10 /* Data.framework */; };
+		725D314629883E2B007AFE1C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D314529883E2B007AFE1C /* LoginPresenterTests.swift */; };
+		725D315129883F54007AFE1C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315029883F54007AFE1C /* LoginPresenter.swift */; };
+		725D315B29883FD2007AFE1C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315A29883FD2007AFE1C /* LoginViewModel.swift */; };
+		725D3195298852B6007AFE1C /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D3194298852B6007AFE1C /* AuthenticationSpy.swift */; };
 		7268A89F296DD94200A5C7F8 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268A89E296DD94200A5C7F8 /* Model.swift */; };
 		7268A8AB296DDDDD00A5C7F8 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268A8AA296DDDDD00A5C7F8 /* RemoteAddAccount.swift */; };
 		7268A8B5296DDE8B00A5C7F8 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7268A8B4296DDE8B00A5C7F8 /* HttpPostClient.swift */; };
@@ -402,6 +406,10 @@
 		724D61AF29771AD9009F9676 /* UseCasesIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UseCasesIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		724D61B129771ADA009F9676 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		724D61B329771ADA009F9676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		725D314529883E2B007AFE1C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		725D315029883F54007AFE1C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presentation/Presenters/SignUp/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
+		725D315A29883FD2007AFE1C /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Presentation/Presenters/SignUp/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
+		725D3194298852B6007AFE1C /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		7268A89E296DD94200A5C7F8 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		7268A8AA296DDDDD00A5C7F8 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		7268A8B4296DDE8B00A5C7F8 /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
@@ -798,6 +806,7 @@
 			isa = PBXGroup;
 			children = (
 				721696742979D44400471DD4 /* AddAccountSpy.swift */,
+				725D3194298852B6007AFE1C /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -876,6 +885,23 @@
 				724D61B329771ADA009F9676 /* Info.plist */,
 			);
 			path = UseCasesIntegrationTests;
+			sourceTree = "<group>";
+		};
+		725D313C29883BC2007AFE1C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				725D314529883E2B007AFE1C /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		725D314F29883F29007AFE1C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				725D315029883F54007AFE1C /* LoginPresenter.swift */,
+				725D315A29883FD2007AFE1C /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		7268A8BC296DDFF000A5C7F8 /* UseCases */ = {
@@ -1119,6 +1145,7 @@
 		72A6F02D297827AB002A4F8C /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				725D314F29883F29007AFE1C /* Login */,
 				7216963E2979CB1100471DD4 /* SignUp */,
 			);
 			path = Presenters;
@@ -1127,6 +1154,7 @@
 		72A6F04229782A73002A4F8C /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				725D313C29883BC2007AFE1C /* Login */,
 				721696572979D28000471DD4 /* SignUp */,
 			);
 			path = Presenters;
@@ -1811,11 +1839,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725D315129883F54007AFE1C /* LoginPresenter.swift in Sources */,
 				72A6F0092978251E002A4F8C /* SignUpPresenter.swift in Sources */,
 				721696382979A79C00471DD4 /* LoadingView.swift in Sources */,
 				721696402979CB2D00471DD4 /* SignUpViewModel.swift in Sources */,
 				72A6F0272978277D002A4F8C /* AlertView.swift in Sources */,
 				72017B772980962200EA83F4 /* Validation.swift in Sources */,
+				725D315B29883FD2007AFE1C /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1824,12 +1854,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				721696892979D5CD00471DD4 /* TestFactorys.swift in Sources */,
+				725D314629883E2B007AFE1C /* LoginPresenterTests.swift in Sources */,
 				721696812979D4F500471DD4 /* LoadingViewSpy.swift in Sources */,
 				721696752979D44400471DD4 /* AddAccountSpy.swift in Sources */,
 				7216965A2979D32800471DD4 /* AlertViewSpy.swift in Sources */,
 				72A6F05A297887B1002A4F8C /* AccounctModelFactory.swift in Sources */,
 				72017B9B298097AB00EA83F4 /* ValidationSpy.swift in Sources */,
 				7216962C2979A24E00471DD4 /* TestExtensions.swift in Sources */,
+				725D3195298852B6007AFE1C /* AuthenticationSpy.swift in Sources */,
 				72A6EFED29777BEC002A4F8C /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
