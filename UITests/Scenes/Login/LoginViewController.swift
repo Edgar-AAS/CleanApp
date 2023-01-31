@@ -8,8 +8,12 @@ class LoginViewControllerTests: XCTestCase {
         XCTAssertEqual(makeSut().loadingIndicator.isAnimating, false)
     }
     
-    func test_sut_implements_loadView() {
+    func test_sut_implements_loadingView() {
         XCTAssertNotNil(makeSut() as LoadingView)
+    }
+    
+    func test_sut_implements_alertView() {
+        XCTAssertNotNil(makeSut() as AlertView)
     }
 }
 
