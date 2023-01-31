@@ -5,8 +5,10 @@ import Presentation
 public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
     
-    public var signUp: ((SignUpViewModel) -> Void)? //dependencia
+    public var login: ((LoginViewModel) -> Void)? //dependencia
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,13 @@ public final class LoginViewController: UIViewController, Storyboarded {
     private func configure() {
         title = "4Devs"
         loginButton.layer.cornerRadius = 5
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardTap()
+    }
+    
+    @objc private func loginButtonTapped() {
+        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        login?(viewModel)
     }
 }
 
