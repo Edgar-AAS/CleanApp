@@ -4,7 +4,7 @@ import UI
 import Validation
 
 class SignUpFactoryTests: XCTestCase {
-    //ao aumentar o timeout para > 0.6 na minha maquina, o teste gera um falso positivo, pois o tempo para executar o completion passa a ser suficiente
+    //ao aumentar o timeout para > 0.6 na minha maquina, o teste gera um falso positivo, pois o tempo para executar o completion em background passa a ser suficiente
     func test_background_request_should_complete_on_main_thread() {
         let (sut, addAccountSpy) = makeSut()
         sut.loadViewIfNeeded()

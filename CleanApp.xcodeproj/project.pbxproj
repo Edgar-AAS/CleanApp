@@ -941,6 +941,7 @@
 		7268A8BD296DE00C00A5C7F8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7268A8CB296E08F900A5C7F8 /* Errors */,
 				72807CB2296CEA3C001B8F10 /* AccountModel.swift */,
 				7268A89E296DD94200A5C7F8 /* Model.swift */,
 			);
@@ -1062,7 +1063,6 @@
 		72807CA6296CE64C001B8F10 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				7268A8CB296E08F900A5C7F8 /* Errors */,
 				7268A8BC296DDFF000A5C7F8 /* UseCases */,
 				7268A8BD296DE00C00A5C7F8 /* Models */,
 				72807CA8296CE64C001B8F10 /* Info.plist */,
