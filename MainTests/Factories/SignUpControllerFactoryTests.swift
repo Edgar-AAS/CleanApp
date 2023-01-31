@@ -3,7 +3,7 @@ import Main
 import UI
 import Validation
 
-class SignUpFactoryTests: XCTestCase {
+class SignUpControllerFactoryTests: XCTestCase {
     //ao aumentar o timeout para > 0.6 na minha maquina, o teste gera um falso positivo, pois o tempo para executar o completion em background passa a ser suficiente
     func test_background_request_should_complete_on_main_thread() {
         let (sut, addAccountSpy) = makeSut()
@@ -28,7 +28,7 @@ class SignUpFactoryTests: XCTestCase {
     }
 }
 
-extension SignUpFactoryTests {
+extension SignUpControllerFactoryTests {
     func makeSut(file: StaticString = #filePath, line: UInt = #line) -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy){
         let addAccountSpy = AddAccountSpy()
         let sut = makeSignUpController(addAccount: MainQueueDispatchDecorator(addAccountSpy))
