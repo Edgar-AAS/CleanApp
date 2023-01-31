@@ -81,6 +81,8 @@
 		724D61B229771ADA009F9676 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D61B129771ADA009F9676 /* AddAccountIntegrationTests.swift */; };
 		724D61B429771ADA009F9676 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72807CBC296CEBAD001B8F10 /* Data.framework */; };
 		725261A2298981AD003FCC8E /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 725261A1298981AD003FCC8E /* Login.storyboard */; };
+		725261AD29898635003FCC8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725261AC29898635003FCC8E /* LoginViewController.swift */; };
+		725261C72989870A003FCC8E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725261C62989870A003FCC8E /* LoginViewController.swift */; };
 		725D314629883E2B007AFE1C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D314529883E2B007AFE1C /* LoginPresenterTests.swift */; };
 		725D315129883F54007AFE1C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315029883F54007AFE1C /* LoginPresenter.swift */; };
 		725D315B29883FD2007AFE1C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315A29883FD2007AFE1C /* LoginViewModel.swift */; };
@@ -408,6 +410,8 @@
 		724D61B129771ADA009F9676 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		724D61B329771ADA009F9676 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		725261A1298981AD003FCC8E /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = UI/Scenes/SignUp/Login.storyboard; sourceTree = SOURCE_ROOT; };
+		725261AC29898635003FCC8E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		725261C62989870A003FCC8E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		725D314529883E2B007AFE1C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		725D315029883F54007AFE1C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presentation/Presenters/SignUp/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		725D315A29883FD2007AFE1C /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Presentation/Presenters/SignUp/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -603,6 +607,7 @@
 		72017979297EC70000EA83F4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				725261AB29898618003FCC8E /* Login */,
 				7201796B297EC65800EA83F4 /* SignUp */,
 			);
 			path = Scenes;
@@ -893,7 +898,16 @@
 		7252619829898198003FCC8E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				725261C62989870A003FCC8E /* LoginViewController.swift */,
 				725261A1298981AD003FCC8E /* Login.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		725261AB29898618003FCC8E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				725261AC29898635003FCC8E /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1766,6 +1780,7 @@
 				728584A82986C72100722C66 /* RoundedTextField.swift in Sources */,
 				724C66EB297DE9500062A23A /* SignUpViewController.swift in Sources */,
 				7201799F297ED64400EA83F4 /* Storyboarded.swift in Sources */,
+				725261C72989870A003FCC8E /* LoginViewController.swift in Sources */,
 				7285849D2986C48900722C66 /* Color.swift in Sources */,
 				728584B22986D10400722C66 /* NavigationController.swift in Sources */,
 				728584932986C45B00722C66 /* UIColorExtensions.swift in Sources */,
@@ -1776,6 +1791,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				725261AD29898635003FCC8E /* LoginViewController.swift in Sources */,
 				724C65E2297DD6830062A23A /* SignUpViewControllerTests.swift in Sources */,
 				7201797C297EC80B00EA83F4 /* TestsExtensions.swift in Sources */,
 			);

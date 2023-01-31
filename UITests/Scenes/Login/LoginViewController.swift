@@ -1,0 +1,23 @@
+import XCTest
+import UIKit
+import Presentation
+@testable import UI
+
+class LoginViewControllerTests: XCTestCase {
+    func test_loading_is_hidden_on_start() {
+        XCTAssertEqual(makeSut().loadingIndicator.isAnimating, false)
+    }
+    
+    func test_sut_implements_loadView() {
+        XCTAssertNotNil(makeSut() as LoadingView)
+    }
+}
+
+extension LoginViewControllerTests {
+    func makeSut(signUpSpy: ((SignUpViewModel) -> Void)? = nil) -> LoginViewController {
+        let sut = LoginViewController.instantiate()
+        sut.signUp = signUpSpy
+        sut.loadViewIfNeeded()
+        return sut
+    }
+}
