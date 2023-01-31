@@ -83,7 +83,6 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp2], timeout: 1)
     }
     
-    
     func test_signUp_should_call_validation_with_correct_values() {
         let validationSpy = ValidationSpy()
         let sut = makeSut(validation: validationSpy)
