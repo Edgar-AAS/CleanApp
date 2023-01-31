@@ -33,7 +33,6 @@ public final class LoginPresenter {
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Erro", message: errorMessage))
                 case .success:
                     self.alertView.showMessage(viewModel: AlertViewModel(title: "Sucesso", message: "Login feito com sucesso."))
-                    
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
