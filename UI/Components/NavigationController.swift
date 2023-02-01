@@ -2,6 +2,8 @@ import Foundation
 import UIKit
 
 public final class NavigationController: UINavigationController {
+    private var currentViewController: UIViewController?
+    
     required init?(coder aDecoder: NSCoder) { //inicializador do storyboad
         super.init(coder: aDecoder)
         setup()
@@ -18,16 +20,24 @@ public final class NavigationController: UINavigationController {
     
     private func setup() {
         navigationBar.barTintColor = Color.primaryDark
-        navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        navigationBar.tintColor = .white
         navigationBar.isTranslucent = false
         navigationBar.barStyle = .black
     }
     
     public func setRootViewController(_ viewController: UIViewController) {
         setViewControllers([viewController], animated: true)
+        currentViewController = viewController
+        hideBackButtonText()
     }
     
+   
     public func pushViewController(_ viewController: UIViewController) {
         pushViewController(viewController, animated: true)
+        hideBackButtonText()
+    }
+    
+    public func hideBackButtonText() {
+        currentViewController?.navigationItem.backBarButtonItem = UIBarButtonItem(title: nil, style: .plain, target: nil, action: nil)
     }
 }
