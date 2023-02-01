@@ -88,6 +88,8 @@
 		7252621D2989BE25003FCC8E /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252621C2989BE25003FCC8E /* LoginControllerFactory.swift */; };
 		725262262989BF44003FCC8E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D3194298852B6007AFE1C /* AuthenticationSpy.swift */; };
 		72526271298AE2E8003FCC8E /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72526270298AE2E8003FCC8E /* Welcome.storyboard */; };
+		7252627C298AE75F003FCC8E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252627B298AE75F003FCC8E /* WelcomeViewController.swift */; };
+		72526286298AEBD2003FCC8E /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72526285298AEBD2003FCC8E /* WelcomeViewController.swift */; };
 		725D314629883E2B007AFE1C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D314529883E2B007AFE1C /* LoginPresenterTests.swift */; };
 		725D315129883F54007AFE1C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315029883F54007AFE1C /* LoginPresenter.swift */; };
 		725D315B29883FD2007AFE1C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315A29883FD2007AFE1C /* LoginViewModel.swift */; };
@@ -421,6 +423,8 @@
 		725262122989BA31003FCC8E /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		7252621C2989BE25003FCC8E /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
 		72526270298AE2E8003FCC8E /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = UI/Scenes/Login/Welcome.storyboard; sourceTree = SOURCE_ROOT; };
+		7252627B298AE75F003FCC8E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = UITests/Scenes/Login/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
+		72526285298AEBD2003FCC8E /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = UI/Scenes/Login/WelcomeViewController.swift; sourceTree = SOURCE_ROOT; };
 		725D314529883E2B007AFE1C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		725D315029883F54007AFE1C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presentation/Presenters/SignUp/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		725D315A29883FD2007AFE1C /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Presentation/Presenters/SignUp/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -617,6 +621,7 @@
 		72017979297EC70000EA83F4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				7252627A298AE748003FCC8E /* Welcome */,
 				725261AB29898618003FCC8E /* Login */,
 				7201796B297EC65800EA83F4 /* SignUp */,
 			);
@@ -926,7 +931,16 @@
 		72526267298AE2B2003FCC8E /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				72526285298AEBD2003FCC8E /* WelcomeViewController.swift */,
 				72526270298AE2E8003FCC8E /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		7252627A298AE748003FCC8E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				7252627B298AE75F003FCC8E /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -1802,6 +1816,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72526286298AEBD2003FCC8E /* WelcomeViewController.swift in Sources */,
 				72017991297ED44C00EA83F4 /* UIViewControllerExtensions.swift in Sources */,
 				728584A82986C72100722C66 /* RoundedTextField.swift in Sources */,
 				724C66EB297DE9500062A23A /* SignUpViewController.swift in Sources */,
@@ -1818,6 +1833,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				725261AD29898635003FCC8E /* LoginViewController.swift in Sources */,
+				7252627C298AE75F003FCC8E /* WelcomeViewController.swift in Sources */,
 				724C65E2297DD6830062A23A /* SignUpViewControllerTests.swift in Sources */,
 				7201797C297EC80B00EA83F4 /* TestsExtensions.swift in Sources */,
 			);

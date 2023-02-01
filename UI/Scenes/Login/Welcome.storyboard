@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Login-->
+        <!--Welcome-->
         <scene sceneID="BeD-63-xmR">
             <objects>
-                <viewController storyboardIdentifier="WelcomeViewController" id="BYT-fN-Bi2" userLabel="Login" customClass="WelcomeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeViewController" id="BYT-fN-Bi2" userLabel="Welcome" customClass="WelcomeViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yru-xT-nHh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,7 +90,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="ZuP-Fu-O1I" id="Heh-w2-ab7"/>
+                        <outlet property="loginButton" destination="hmE-N0-5mW" id="eIP-xV-7KX"/>
+                        <outlet property="signUpButton" destination="ZuP-Fu-O1I" id="aHE-Ug-2Ig"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBN-vc-RSg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
