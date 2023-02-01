@@ -6,6 +6,8 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
     @IBOutlet var signUpButton: UIButton!
     
     //click no botao, essa função deve chamada e o comportamento nao depende desse controller, motivo: Nao acoplagem de componentes dentro da controller, a viewController deve ser burra em relação a qual tela chamar e a quais dependencias devem ser injetadas para o roteamento.
+    //existe a opcao de injetar a logica de navegacao atraves do presenter
+    
     public var login: (() -> Void)?
     public var signUp: (() -> Void)?
 

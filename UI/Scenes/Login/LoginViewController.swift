@@ -8,7 +8,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    public var login: ((LoginViewModel) -> Void)? //dependencia
+    public var login: ((LoginRequest) -> Void)? //dependencia
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ public final class LoginViewController: UIViewController, Storyboarded {
     }
     
     @objc private func loginButtonTapped() {
-        let viewModel = LoginViewModel(email: emailTextField.text, password: passwordTextField.text)
+        let viewModel = LoginRequest(email: emailTextField.text, password: passwordTextField.text)
         login?(viewModel)
     }
 }
