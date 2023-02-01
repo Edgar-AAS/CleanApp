@@ -87,6 +87,7 @@
 		725262132989BA31003FCC8E /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725262122989BA31003FCC8E /* RemoteAuthenticationFactory.swift */; };
 		7252621D2989BE25003FCC8E /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252621C2989BE25003FCC8E /* LoginControllerFactory.swift */; };
 		725262262989BF44003FCC8E /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D3194298852B6007AFE1C /* AuthenticationSpy.swift */; };
+		72526271298AE2E8003FCC8E /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72526270298AE2E8003FCC8E /* Welcome.storyboard */; };
 		725D314629883E2B007AFE1C /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D314529883E2B007AFE1C /* LoginPresenterTests.swift */; };
 		725D315129883F54007AFE1C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315029883F54007AFE1C /* LoginPresenter.swift */; };
 		725D315B29883FD2007AFE1C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 725D315A29883FD2007AFE1C /* LoginViewModel.swift */; };
@@ -419,6 +420,7 @@
 		725262082989B150003FCC8E /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		725262122989BA31003FCC8E /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		7252621C2989BE25003FCC8E /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
+		72526270298AE2E8003FCC8E /* Welcome.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Welcome.storyboard; path = UI/Scenes/Login/Welcome.storyboard; sourceTree = SOURCE_ROOT; };
 		725D314529883E2B007AFE1C /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
 		725D315029883F54007AFE1C /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginPresenter.swift; path = Presentation/Presenters/SignUp/LoginPresenter.swift; sourceTree = SOURCE_ROOT; };
 		725D315A29883FD2007AFE1C /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewModel.swift; path = Presentation/Presenters/SignUp/LoginViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -605,6 +607,7 @@
 		72017972297EC6EE00EA83F4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				72526267298AE2B2003FCC8E /* Welcome */,
 				7252619829898198003FCC8E /* Login */,
 				72017964297EC64700EA83F4 /* SignUp */,
 			);
@@ -918,6 +921,14 @@
 				725261AC29898635003FCC8E /* LoginViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		72526267298AE2B2003FCC8E /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				72526270298AE2E8003FCC8E /* Welcome.storyboard */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 		725D313C29883BC2007AFE1C /* Login */ = {
@@ -1656,6 +1667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724C66F3297DE9A10062A23A /* SignUp.storyboard in Resources */,
+				72526271298AE2E8003FCC8E /* Welcome.storyboard in Resources */,
 				728584892986B87F00722C66 /* Images.xcassets in Resources */,
 				725261A2298981AD003FCC8E /* Login.storyboard in Resources */,
 			);

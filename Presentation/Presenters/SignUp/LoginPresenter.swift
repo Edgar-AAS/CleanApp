@@ -8,7 +8,7 @@ public final class LoginPresenter {
     private let loadingView: LoadingView
     
     public init(alertView: AlertView, authentication: Authentication, loadingView: LoadingView, validation: Validation) {
-        self.validation = validation
+        self.validation = validation //validation composite
         self.alertView = alertView
         self.authentication = authentication
         self.loadingView = loadingView
