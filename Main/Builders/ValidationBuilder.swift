@@ -40,6 +40,4 @@ public final class ValidationBuilder {
     public func build() -> [Validation] {
         return validations
     }
-    
-    
 }
